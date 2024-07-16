@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Signika Negative", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  inline-size: 100%;
+  block-size: 100vh;
+  background-color: #161a1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  inline-size: 8rem;
+  block-size: 8rem;
+  background-color: #fff;
+  border-radius: 10rem;
+  box-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.6);
+  text-align: right;
+  position: relative;
+  transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+
+.change.search-bar {
+  inline-size: 45rem;
+}
+
+.search-bar input {
+  inline-size: 100%;
+  block-size: 100%;
+  border: none;
+  border-radius: 10rem;
+  background-color: none;
+  padding-block: 1rem;
+  padding-inline-end: 7.5rem;
+  padding-inline-start: 2rem;
+  font-size: 2rem;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.change.search-bar input {
+  opacity: 1;
+  transition: opacity 0.5s 0.3s;
+}
+
+.search-bar i {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 0.5rem;
+  transform: translateY(-50%);
+  inline-size: 7rem;
+  block-size: 7rem;
+  background-color: #ed3758;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+
+  transition: opacity 0.3s 0.3s;
+}
+
+.search-bar i:nth-child(3) {
+  opacity: 0;
+}
+
+.change.search-bar i:nth-child(3) {
+  opacity: 1;
+}
+
+.change.search-bar i:nth-child(2) {
+  opacity: 0;
+}
